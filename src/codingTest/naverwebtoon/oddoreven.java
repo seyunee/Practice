@@ -1,4 +1,4 @@
-package naverwebtoon;
+package codingTest.naverwebtoon;
 
 import java.util.ArrayList;
 import java.util.Random;
