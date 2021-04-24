@@ -17,10 +17,12 @@ public class zigzeg {
                 x++;
             }
 
-            nMatrix[x][y] = count++;
+            count++;
             if(r-1==x && c-1==y) return count;
             while(y - 1 > -1 && x + 1 < n) {
-                nMatrix[++x][--y] = count++;
+                ++x;
+                --y;
+                count++;
                 if(r-1==x && c-1==y) return count;
             }
 
@@ -29,10 +31,12 @@ public class zigzeg {
             } else {
                 y++;
             }
-            nMatrix[x][y] = count++;
+            count++;
             if(r-1==x && c-1==y) return count;
             while(x - 1 > -1 && y + 1 < n) {
-                nMatrix[--x][++y] = count++;
+                --x;
+                ++y;
+                count++;
                 if(r-1==x && c-1==y) return count;
             }
         }
@@ -49,8 +53,8 @@ public class zigzeg {
 
     public static void main(String[] agrs) {
         int n = 6;
-        int r = 6;
-        int c = 6;
+        int r = 5;
+        int c = 5;
 
 
         System.out.println(solution(n, r, c));
